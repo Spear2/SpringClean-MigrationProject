@@ -1,0 +1,206 @@
+/* GLOBAL LAYOUT */
+.CleanerPayments_container {
+  padding: 0px;
+  margin: 0px;
+  background-color: #bfdff5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Reusing your Header Style */
+.dashboard-header {
+  margin: 10px 30px 0 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border-top: 4px solid #aae858;
+  color: #1c4274;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Cal Sans", sans-serif;
+  flex-shrink: 0;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.payments-body {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- 1. BALANCE CARD (The Wallet) --- */
+.balance-card {
+  background: linear-gradient(135deg, #1c4274 0%, #16325c 100%);
+  border-radius: 20px;
+  padding: 30px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(28, 66, 116, 0.2);
+  font-family: "Cal Sans", sans-serif;
+  flex-shrink: 0;
+}
+
+.balance-info p {
+  margin: 0;
+  opacity: 0.8;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.balance-info h1 {
+  margin: 5px 0 0 0;
+  font-size: 2.7rem;
+  color: #aae858; /* Green Accent Number */
+}
+
+.payout-btn {
+  background-color: #aae858;
+  color: #1c4274;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  font-family: "Cal Sans", sans-serif;
+}
+
+.payout-btn:hover {
+  transform: scale(1.05);
+  background-color: #9bd64e;
+}
+
+/* --- 2. HISTORY LIST --- */
+.section-title {
+  font-family: "Cal Sans", sans-serif;
+  color: #1c4274;
+  margin: 10px 0 0 0;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* --- 3. PAYMENT ROW COMPONENT STYLE --- */
+.payment-row {
+  background-color: white;
+  border-radius: 15px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s;
+}
+
+.payment-row:hover {
+  transform: translateY(-2px);
+}
+
+/* Left Side */
+.payment-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.payment-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #f0f7ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #1c4274;
+  font-weight: bold;
+}
+
+.payment-text h3 {
+  margin: 0;
+  font-family: "Cal Sans", sans-serif;
+  color: #1c4274;
+  font-size: 18px;
+}
+
+.payment-text p {
+  margin: 5px 0 0 0;
+  font-size: 13px;
+  color: #888;
+  font-family: sans-serif;
+}
+
+/* Right Side */
+.payment-status-box {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 5px;
+}
+
+.payment-amount {
+  font-family: "Cal Sans", sans-serif;
+  font-size: 18px;
+  color: #1c4274;
+}
+
+.payment-badge {
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  border: 1px solid;
+  text-transform: uppercase;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .CleanerPayments_container {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .dashboard-header {
+    margin: 10px 15px 0 15px;
+    padding: 15px;
+  }
+
+  .balance-card {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .payment-row {
+    flex-direction: column; /* Stack row contents */
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .payment-status-box {
+    align-items: flex-start; /* Align left on mobile */
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+}

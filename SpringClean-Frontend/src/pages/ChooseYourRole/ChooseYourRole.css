@@ -1,0 +1,86 @@
+/* Full page */
+.choose-role-page {
+  background: linear-gradient(135deg, #1c4274, #0f2847);
+  color: white;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Nunito", sans-serif;
+}
+
+.role-btn {
+  background-color: #aae858;
+  color: #1c4274;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.role-btn:hover {
+  background-color: #1c4274;
+  color: #aae858;
+  transform: scale(1.05);
+}
+
+/* Centered container */
+.role-container {
+  background-color: white;
+  color: #1c4274;
+  border-radius: 30px;
+  padding: 60px 80px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  max-width: 500px;
+  width: 90%;
+  animation: fadeIn 0.8s ease;
+}
+
+.role-container h1 {
+  font-family: "Cal Sans", sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+/* Buttons */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .role-container {
+    padding: 40px 30px;
+  }
+
+  .role-btn {
+    font-size: 1.1rem;
+  }
+}

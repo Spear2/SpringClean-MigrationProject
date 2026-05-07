@@ -1,0 +1,64 @@
+.aboutus-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #a6e22e;
+  color: white;
+  padding: 60px 80px;
+  box-sizing: border-box;
+}
+
+/* Wraps all three sections in a single row */
+.explanation-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 40px;
+  width: 100%;
+  max-width: 1300px;
+}
+
+/* Each explanation box */
+.explanation-container {
+  flex: 1;
+  background-color: #1c4274; /* light overlay for contrast */
+  border-radius: 20px;
+  padding: 30px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+  color: #0055e9;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.explanation-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.title h1 {
+  font-family: "Cal Sans", sans-serif;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #a6e22e;
+  text-align: center;
+}
+
+/* Responsive layout */
+@media (max-width: 1000px) {
+  .explanation-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .explanation-container {
+    text-align: center;
+    width: 100%;
+  }
+
+  .title h1 {
+    font-size: 1.8rem;
+  }
+}

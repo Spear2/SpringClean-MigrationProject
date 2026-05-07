@@ -1,0 +1,23 @@
+package com.project.SpringClean.dto;
+
+
+import lombok.Getter;
+import lombok.Setter;
+import java.util.List;
+
+@Getter
+@Setter
+public class CompanyUpdateRequest {
+    private String companyName;
+    private String tagline;
+    private String address;
+    private String phoneNumber;
+    private String email;
+    private String website;
+    private String about;
+    private List<String> services;
+    private List<String> whyUs;
+    private String rating;
+    private String employees;
+    private String projects;
+}

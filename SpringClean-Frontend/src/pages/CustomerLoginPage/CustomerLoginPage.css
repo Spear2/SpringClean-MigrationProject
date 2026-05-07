@@ -1,0 +1,136 @@
+.page-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+}
+
+/* Left side */
+.left-side {
+  flex: 1;
+  background-color: #aae858;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #1c4274;
+  text-align: center;
+  padding: 40px;
+}
+
+.left-side h1 {
+  font-family: "Cal Sans", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #1c4274;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Right side */
+.right-side {
+  flex: 1;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Login form */
+.loginform-container {
+  border: 3px solid #1c4274;
+  border-radius: 30px;
+  padding: 40px;
+  width: 90%;
+  max-width: 450px;
+  background-color: white;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.loginform-container h2 {
+  font-family: "Cal Sans", sans-serif;
+  font-size: 2.2rem;
+  color: #1c4274;
+  margin-bottom: 10px;
+}
+
+/* Input fields */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: 600;
+  color: #1c4274;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #aae858;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(170, 232, 88, 0.2);
+}
+
+/* Button */
+.login-btn {
+  background: linear-gradient(135deg, #1c4274, #0f2847);
+  color: #aae858;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  border-radius: 30px;
+  font-family: "Cal Sans", sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #aae858, #8dd63f);
+  color: #1c4274;
+  transform: translateY(-2px);
+}
+
+/* Signup text */
+.signup-text {
+  margin-top: 20px;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+.signup-text a {
+  color: #1c4274;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .page-container {
+    flex-direction: column;
+  }
+
+  .left-side {
+    height: 35vh;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+}

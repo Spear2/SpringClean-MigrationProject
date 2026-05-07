@@ -1,0 +1,222 @@
+/* 1. MAIN CONTAINER (Matches React className) */
+.company-dashboard-container {
+  padding: 0px;
+  margin: 0px;
+  background-color: #bfdff5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Desktop: Lock scroll */
+}
+
+/* 2. HEADER */
+.dashboard-header {
+  margin: 10px 30px 0 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border-top: 4px solid #aae858;
+  color: #1c4274;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Cal Sans", sans-serif;
+  flex-shrink: 0;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.highlight {
+  color: #aae858;
+}
+
+/* 3. BODY WRAPPER */
+.dashboard-body {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 30px;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* 4. KPI SIDEBAR */
+.kpi-sidebar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+/* Visual style for the KPI Cards */
+.kpi-card {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(28, 66, 116, 0.05);
+  border-left: 5px solid #1c4274;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.kpi-title {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.kpi-info {
+  margin: 0;
+  font-size: 2rem;
+  color: #1c4274;
+  font-weight: bold;
+}
+
+/* 5. CONTENT WRAPPER */
+.dashboard-content {
+  flex: 1;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 20px;
+  border-top: 4px solid #aae858;
+  display: flex;
+  flex-direction: row; /* Desktop: Side by side */
+  gap: 30px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* 6. HALF SECTIONS */
+.half-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-width: 0;
+}
+
+/* Replaces .booking-tab-header for the Company Dashboard context */
+.section-header {
+  font-family: "Cal Sans", sans-serif;
+  color: #1c4274;
+  margin: 0 0 10px 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #1c4274;
+  letter-spacing: 0.5px;
+  font-size: 1.2rem;
+}
+
+/* 7. SCROLLABLE LIST */
+.scrollable-list {
+  overflow-y: auto;
+  flex: 1;
+  padding-right: 5px;
+}
+
+/* --- TABLE STYLING (Specific to Company Dash) --- */
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.styled-table th {
+  text-align: left;
+  padding: 10px;
+  color: #666;
+  font-size: 12px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #eee;
+}
+
+.styled-table td {
+  padding: 15px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #1c4274;
+}
+
+/* STATUS BADGES */
+.status-badge {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.status-badge.pending {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+.status-badge.completed,
+.status-badge.paid {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+.status-badge.in-progress {
+  background: #e3f2fd;
+  color: #1565c0;
+}
+
+/* =========================================
+   MOBILE / TABLET RESPONSIVENESS
+   (Screens smaller than 1000px)
+   ========================================= */
+@media (max-width: 1000px) {
+  /* 1. Unlock Page Scroll */
+  .company-dashboard-container {
+    height: auto;
+    min-height: 100vh;
+    overflow-y: auto; /* Enable page scrolling */
+  }
+
+  /* 2. Adjust Header */
+  .dashboard-header {
+    margin: 10px 15px 0 15px;
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .dashboard-header h1 {
+    font-size: 1.2rem;
+  }
+
+  /* 3. Adjust Body */
+  .dashboard-body {
+    padding: 15px;
+    gap: 20px;
+    overflow: visible;
+  }
+
+  /* 4. Stack Content Vertically */
+  .kpi-sidebar {
+    flex-direction: column;
+  }
+
+  .dashboard-content {
+    flex-direction: column; /* Stack Bookings on top of Chart */
+    height: auto;
+    overflow: visible;
+  }
+
+  .half-section {
+    width: 100%;
+    flex: none;
+    margin-bottom: 40px;
+    overflow: visible;
+  }
+
+  .scrollable-list {
+    max-height: 300px; /* Fixed height for list on mobile */
+    overflow-y: auto;
+  }
+}

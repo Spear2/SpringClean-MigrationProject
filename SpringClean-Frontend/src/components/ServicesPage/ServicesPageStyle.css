@@ -1,0 +1,201 @@
+@import url("https://fonts.googleapis.com/css2?family=Cal+Sans&family=Nunito:wght@400;600;800&display=swap");
+
+.services-page-hero {
+  min-height: 950px;
+  display: flex;
+  flex-direction: row; /* side-by-side layout */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #bfdff5;
+  color: #1c4274;
+  text-align: left;
+  padding: 0 80px;
+  gap: 60px;
+  box-sizing: border-box;
+  width: 100%; /* ✅ FIXED: Changed from min-width: 100vh */
+}
+
+/* LEFT SIDE CONTENT */
+.services-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  max-width: 550px;
+}
+
+.services-content h2 {
+  font-size: 3rem;
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+.hero-subtitle {
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  color: #1c4274;
+}
+
+/* BUTTON GROUP */
+.services-buttons {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.service-button {
+  background-color: #aae858;
+  color: #1c4274;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-family: "Cal Sans", sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.service-button:hover {
+  background-color: #1c4274;
+  color: #aae858;
+  transform: scale(1.05);
+}
+
+.service-button:focus {
+  outline: none;
+  background-color: #1c4274;
+  color: #aae858;
+}
+
+.book-button {
+  background-color: #1c4274;
+  color: #aae858;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-family: "Cal Sans", sans-serif;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin: 20px auto; /* centers horizontally */
+  display: block; /* required for margin auto to work */
+}
+
+.book-button:hover {
+  background-color: #1c4274;
+  color: #aae858;
+  transform: scale(1.05);
+}
+
+/* SERVICE INFO CARDS */
+.service-info,
+.basicservice-info {
+  margin-top: 20px;
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+  background-color: #aae858;
+  border-radius: 20px;
+  padding: 20px;
+  font-family: "Nunito", sans-serif;
+  color: #1c4274;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.basicservice-info h1,
+.service-info h1 {
+  font-size: 2.5rem;
+  font-family: "Cal Sans", sans-serif;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.basicservice-info h2 {
+  font-size: 1.8rem;
+  font-family: "Cal Sans", sans-serif;
+  margin-top: 5px;
+}
+
+.basicservice-info p,
+.service-info p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 10px;
+  padding: 0 20px 0 20px;
+  display: inline-block;
+}
+
+/* TYPES OF SERVICES SECTION */
+.types-of-services {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  border: 2px solid #1c4274;
+  border-radius: 20px;
+  padding: 20px;
+  background-color: #f0f8ff;
+}
+
+/* CLEANER SECTION */
+.service-title {
+  margin-bottom: 10px;
+  font-family: "Cal Sans", sans-serif;
+  font-size: 1.8rem;
+}
+
+.services-image {
+  flex: 1; /* takes available space next to text */
+  background-size: cover; /* make image cover whole area */
+  background-position: center; /* center the image */
+  background-repeat: no-repeat;
+  border-radius: 20px; /* soft rounded corners */
+  min-height: 600px; /* ensures visible height */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* subtle depth */
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* optional hover effect */
+.services-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 764px) {
+  .services-page-hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px;
+  }
+
+  .services-content {
+    align-items: center;
+    text-align: center;
+  }
+
+  .services-image img {
+    max-width: 600px;
+  }
+}
+
+.divider {
+  width: 80%;
+  margin: 10px auto;
+  border: 1px solid #1c4274; /* same color as your theme */
+  border-radius: 2px;
+  opacity: 0.5; /* make it subtle */
+}

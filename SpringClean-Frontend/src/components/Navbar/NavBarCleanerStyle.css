@@ -1,0 +1,122 @@
+.navbar-cleaner {
+  width: 100%;
+  height: 100px;
+  background: #003366;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Logo */
+.navbar-logo .logo-text {
+  font-weight: 800;
+  font-size: 2rem;
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Cal Sans", sans-serif;
+}
+
+/* Nav links */
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+  list-style: none;
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1em;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-links a:hover {
+  color: #aae858;
+  transform: scale(1.05);
+}
+
+.navbar-links a.focus {
+  color: #aae858;
+}
+
+/* Right-side user info */
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+.navbar-name {
+  font-size: 0.95em;
+  color: #f1f1f1;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  transition: 0.3s;
+}
+
+/* 📱 Mobile styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: #003366;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    display: none; /* collapsed by default */
+  }
+
+  /* OPEN MENU */
+  .navbar-links.open {
+    display: flex;
+  }
+
+  /* SHOW HAMBURGER */
+  .hamburger {
+    display: flex;
+  }
+  
+  /* HAMBURGER ANIMATION */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(8px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-8px);
+  }
+}
+

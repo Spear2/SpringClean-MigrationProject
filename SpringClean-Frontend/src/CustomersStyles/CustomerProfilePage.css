@@ -1,0 +1,261 @@
+/* Define SpringClean Palette */
+:root {
+  --primary-blue: #1c4274;
+  --accent-green: #aae858;
+  --border-color: #ddd;
+  --background-light: #f0f7ff;
+  --shadow-depth: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Global & Header --- */
+.top-content {
+  text-align: center;
+  padding: 30px 20px 20px 20px;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.top-content h1 {
+  font-weight: 800;
+  color: var(--primary-blue);
+  font-size: 2.5rem;
+  margin: 0 0 5px 0;
+  margin-top: 10px;
+}
+
+.top-content span {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* --- Main Container --- */
+.ccpr-profile-page-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: var(--background-light);
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+/* --- Layout & Uniform Box (Read-Only State) --- */
+.ccpr-uniform-box,
+.ccpr-profile-layout {
+  width: 100%;
+  max-width: 1100px;
+  height: auto; /* Allow height to adjust to content */
+  border-radius: 12px;
+  box-shadow: var(--shadow-depth);
+  background: #fff;
+  overflow: hidden;
+  /* Removed redundant border from left/right sides */
+}
+
+.ccpr-profile-layout {
+  display: flex;
+  flex-wrap: wrap; /* Allows stacking on smaller screens */
+  min-height: 500px;
+}
+
+/* --- Left Side (Image) --- */
+.ccpr-profile-left {
+  flex: 1;
+  min-width: 300px;
+  background: #f9fafc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  /* Added accent border */
+  border-right: 5px solid var(--accent-green);
+}
+
+.ccpr-profile-image-box {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Make image circular */
+  background: #e8e8e8;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 0 6px var(--accent-green); /* Green border ring */
+}
+
+.ccpr-profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ccpr-upload-label {
+  background-color: var(--primary-blue);
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 10px 20px;
+  font-size: 1rem;
+  width: fit-content;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+.ccpr-upload-label:hover {
+  background-color: #345f9d;
+}
+.ccpr-upload-label input {
+  display: none;
+}
+
+/* --- Right Side (Fields) --- */
+.ccpr-profile-right {
+  flex: 2;
+  min-width: 400px;
+  padding: 50px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+}
+
+.ccpr-profile-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-bottom: 20px;
+}
+
+.ccpr-field-row {
+  display: flex;
+  gap: 30px;
+}
+
+.ccpr-field-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.ccpr-field-item label {
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--primary-blue);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.ccpr-field-item input {
+  /* Base style for read-only fields */
+  background-color: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px; /* Square/soft edges */
+  padding: 12px 15px;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.2s, background-color 0.2s;
+}
+
+/* Editable fields look slightly different */
+.ccpr-modal-overlay .ccpr-field-item input {
+  background-color: white;
+  border-color: var(--primary-blue);
+  border: 2px solid var(--border-color);
+}
+.ccpr-modal-overlay .ccpr-field-item input:focus {
+  border-color: var(--accent-green);
+  box-shadow: 0 0 0 3px rgba(170, 232, 88, 0.4);
+}
+
+/* --- Buttons (Action Group) --- */
+.ccpr-profile-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+}
+
+.ccpr-edit-btn,
+.ccpr-back-btn {
+  padding: 10px 25px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+/* Save/Edit Primary Button */
+.ccpr-edit-btn {
+  background-color: var(--primary-blue);
+  color: #fff;
+}
+.ccpr-edit-btn:hover {
+  background-color: #0f2b50;
+}
+
+/* Back/Cancel Secondary Button */
+.ccpr-profile-buttons .ccpr-back-btn {
+  background-color: #e0e0e0;
+  color: #555;
+}
+.ccpr-profile-buttons .ccpr-back-btn:hover {
+  background-color: #cccccc;
+}
+
+/* --- MODAL STYLES --- */
+.ccpr-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Changed name to avoid confusion with top-level container */
+.ccpr-modal-box {
+  width: 90%;
+  max-width: 1100px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  /* Add accent top bar to modal */
+  border-top: 5px solid var(--accent-green);
+}
+
+/* Responsive adjustments */
+@media (max-width: 800px) {
+  .ccpr-profile-page-container {
+    padding: 20px 10px;
+  }
+
+  .ccpr-profile-layout {
+    flex-direction: column;
+  }
+
+  .ccpr-profile-left {
+    /* Hide edit button on small screens */
+    border-right: none;
+    border-bottom: 5px solid var(--accent-green);
+    padding: 30px 20px;
+  }
+
+  .ccpr-profile-right {
+    padding: 30px 20px;
+  }
+
+  .ccpr-field-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .ccpr-profile-buttons {
+    justify-content: space-between;
+    gap: 10px;
+  }
+}

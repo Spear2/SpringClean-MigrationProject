@@ -1,0 +1,314 @@
+/* --- Global Page Wrapper --- */
+.main-wrappers {
+  background-color: #f0f7ff; /* Consistent light blue background */
+  min-height: 100vh;
+  font-family: "Nunito", sans-serif;
+  padding: 70px 20px 20px;
+}
+
+/* ==============================
+   Header / Top Section (Re-themed)
+   ============================== */
+.cbc-page-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-bottom: 4px solid #aae858; /* Green accent bar */
+  border-radius: 20px;
+}
+
+.cbc-header-text {
+  margin-left: 15px;
+  text-align: left;
+  color: #1c4274;
+  font-family: "Cal Sans", sans-serif;
+  letter-spacing: 1px;
+}
+
+.cbc-page-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.cbc-page-header p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+.cbc-btn-back-arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: #1c4274;
+  padding: 0 10px;
+  transition: color 0.2s ease;
+}
+
+.cbc-btn-back-arrow:hover {
+  color: #aae858; /* Accent green hover */
+}
+
+/* ==============================
+   Booking Summary Container
+   ============================== */
+.cbc-booking-summary-container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white; /* Card content should be white */
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom: 4px solid #aae858;
+}
+
+.cbc-summary-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers cards horizontally */
+  padding: 0;
+  margin: 0;
+}
+
+.cbc-no-bookings {
+  padding: 40px;
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* ==============================
+   Filter Section
+   ============================== */
+.cbc-filter-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 0 1rem 0;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.cbc-filter-container label {
+  font-weight: 700;
+  color: #1c4274;
+}
+
+.cbc-filter-container select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.cbc-filter-container select:focus {
+  border-color: #1c4274;
+  outline: none;
+}
+
+/* ==============================
+   Booking Card (Assuming BookingCard.js component uses these styles)
+   ============================== */
+.cbc-summary-card {
+  width: 100%;
+  max-width: 900px;
+  background-color: #ffffff;
+  border-left: 8px solid #1c4274; /* Accent left border */
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0; /* Space between cards */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+.cbc-summary-card:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.cbc-booking-info p {
+  margin: 5px 0;
+  font-size: 1rem;
+  color: #333333;
+}
+
+.cbc-booking-actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 12px;
+}
+
+.cbc-cleaner-badge{
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  background: #40cf61ec;
+  margin-right: 10px;
+}
+
+
+
+/* Status Badges (You should define a separate style for each status in BookingCard) */
+.cbc-status-badge {
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  
+}
+
+
+/* Example Status Styles (For BookingCard component use) */
+.status-pending {
+  background-color: #fff3e0;
+  border-radius: 10px;
+  padding: 2px 8px 2px 8px;
+  color: #ff9800;
+}
+.status-accepted {
+  background-color: #e3f2fd;
+  border-radius: 10px;
+  padding: 2px 8px 2px 8px;
+  color: #2196f3;
+}
+.status-paid {
+  background-color: #e8f5e9;
+  border-radius: 10px;
+  padding: 2px 8px 2px 8px;
+  color: #4caf50;
+}
+.status-completed {
+  background-color: #d4edda;
+  border-radius: 10px;
+  padding: 2px 8px 2px 8px;
+  color: #28a745;
+}
+.status-cancelled,
+.status-rejected {
+  background-color: #fae6e8;
+  border-radius: 10px;
+  padding: 2px 8px 2px 8px;
+  color: #e91e25;
+}
+
+.status-inprogress{
+  background-color: #ffff5c2f;
+  border-radius: 10px;
+  padding: 2px 8px 2px 8px;
+  color: #FFBF00;
+}
+
+/* ==============================
+   Booking Action Buttons (Themed)
+   ============================== */
+.cbc-btn-edit,
+.cbc-btn-cancel,
+.cbc-btn-pay,
+.cbc-btn-view {
+  border: none;
+  border-radius: 6px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.cbc-btn-pay {
+  background: #aae858; /* Accent Green */
+  color: #1c4274;
+}
+.cbc-btn-pay:hover {
+  background: #9bd64e;
+}
+
+.cbc-btn-edit {
+  background: #1c4274; /* Dark Blue */
+  color: white;
+}
+.cbc-btn-edit:hover {
+  background: #0f2b50;
+}
+
+.cbc-btn-cancel {
+  background: #d9534f; /* Soft Red */
+  color: white;
+}
+.cbc-btn-cancel:hover {
+  background: #c33d38;
+}
+
+.cbc-btn-view {
+  background: #e0e0e0; /* Light Gray */
+  color: #333;
+}
+.cbc-btn-view:hover {
+  background: #cccccc;
+}
+
+/* ==============================
+   Modal Buttons (Themed)
+   ============================== */
+.cbc-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px;
+  margin-top: 1.5rem;
+}
+
+.cbc-btn-save {
+  background: #1c4274; /* Save/Primary Action */
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+.cbc-btn-save:hover {
+  background: #0f2b50;
+}
+
+.cbc-btn-close-modal {
+  background: #e0e0e0; /* Close/Secondary Action */
+  color: #555;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+.cbc-btn-close-modal:hover {
+  background: #cccccc;
+}
+
+.cbc-btn-danger {
+  background: #d9534f; /* Danger Action */
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+.cbc-btn-danger:hover {
+  background: #c33d38;
+}
+
+/* Modal Content and Overlay are fine as is */
+/* .cbc-modal-overlay { */
+  /* ... */
+/* } */
+/* .cbc-modal-content { */
+  /* ... */
+/* } */

@@ -1,0 +1,144 @@
+
+.cbf-form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  
+  gap: 15px;
+  width: 450px;
+  margin: 0 auto;
+  padding: 25px 20px;
+  background-color: #ffffff;
+  border: 2px solid #1c4274;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+label {
+  display: flex;
+  flex-direction: column;    
+  align-items: flex-start;   
+  width: 100%;
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  color: #1c4274;
+  font-size: 0.95rem;
+}
+
+input {
+  margin-top: 6px;
+  width: 100%;           
+  padding: 10px 12px;
+  border: 1.5px solid #1c4274;
+  border-radius: 8px;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="number"] {
+  width: 100%;
+  appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  appearance: auto;
+  margin: 0;
+}
+
+input:focus {
+  border-color: #2d5a9e;
+  box-shadow: 0 0 5px rgba(45, 90, 158, 0.3);
+}
+
+.cbf-btn-submit {
+  width: 100%;
+  background-color: #1c4274;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.25s ease, transform 0.15s ease;
+}
+
+.cbf-btn-submit:hover {
+  background-color: #2d5a9e;
+  transform: translateY(-2px);
+}
+
+.cbf-btn-submit:active {
+  transform: translateY(0);
+}
+
+.cbf-select-wrapper {
+  position: relative;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.cbf-select-wrapper select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid #1c4274;
+  border-radius: 8px;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.95rem;
+  appearance: none;
+  background-color: #ffffff;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cbf-select-wrapper select:focus {
+  border-color: #2d5a9e;
+  box-shadow: 0 0 5px rgba(45, 90, 158, 0.3);
+}
+
+.cbf-select-wrapper::after {
+  content: "▼"; /* dropdown arrow */
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.75rem;
+  color: #1c4274;
+  pointer-events: none;
+}
+
+
+.cbf-settings-header {
+  text-align: center;
+  margin: 140px 0 35px 0; /* adjust spacing from top as needed */
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cbf-settings-header h1 {
+  color: #1c4274;
+  font-weight: 700;
+  font-size: 3rem;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.settings-header span {
+  color: #666;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.cbf-form-container .cbf-error-text {
+  color: #dc3545;
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  font-weight: 600;
+}

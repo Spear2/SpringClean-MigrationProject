@@ -1,0 +1,78 @@
+/* Container */
+.CompanyLoginpage-container {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 5px;
+  color: #1c4274;
+}
+
+input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #ddd;
+  border-radius: 15px;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+input:focus {
+  border-color: #aae858;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(170, 232, 88, 0.2);
+}
+
+/* Button */
+.login-btn {
+  background: linear-gradient(135deg, #1c4274, #0f2847);
+  color: #aae858;
+  border: none;
+  padding: 15px;
+  width: 100%;
+  border-radius: 30px;
+  font-family: "Cal Sans", sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 10px;
+}
+
+.login-btn:hover {
+  background: linear-gradient(135deg, #aae858, #8dd63f);
+  color: #1c4274;
+  transform: translateY(-2px);
+}
+
+/* Signup */
+.signup-text {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.signup-text a {
+  color: #1c4274;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.signup-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .page-container {
+    flex-direction: column;
+  }
+
+  .left-side {
+    height: 35vh;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+}

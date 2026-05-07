@@ -1,0 +1,213 @@
+/* --- Global Reset & Background --- */
+.main-wrapper {
+  background-color: #bfdff5; /* Very light, clean blue/gray */
+  min-height: 100vh;
+  font-family: "Nunito", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+/* --- Typography and Header Styling --- */
+.top-content {
+  text-align: center;
+  color: #1c4274;
+  padding: 40px 20px 20px 20px;
+}
+
+.top-content h1 {
+  font-size: 3rem;
+  font-weight: 800; /* Bolder header */
+  margin: 0;
+}
+
+.top-content span {
+  font-size: 1.2rem;
+  color: #555; /* Subtle description text */
+  display: block;
+}
+
+/* Header Container (to include the history button) */
+.BookNow-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white; /* White block for header area */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 4px solid #aae858;
+  border-radius: 30px;
+}
+
+/* --- View History Button (Refined Look) --- */
+.btn-viewhistory {
+  background-color: #aae858; /* Accent Green */
+  color: #1c4274; /* Dark Blue Text */
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 10px;
+  font-weight: 700;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+  font-family: "Cal Sans", sans-serif;
+  letter-spacing: 1px;
+}
+
+.btn-viewhistory:hover {
+  background-color: #9bd64e;
+  transform: translateY(-2px);
+}
+
+/* --- Card Wrapper --- */
+.chp-card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px; /* Increased gap for breathing room */
+  padding: 0 20px 50px 20px;
+}
+
+/* --- Cleaner Card Base (Refined Border/Shadow) --- */
+.chp-card-container {
+  width: 320px; /* Slightly wider cards */
+  height: 360px;
+  background-color: white;
+  border: 1px solid #e0e0e0; /* Softer border */
+  border-radius: 12px; /* Slightly larger radius */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08); /* Deeper shadow for elevation */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  padding: 0;
+  transition: transform 0.2s ease;
+  position: relative;
+  border-bottom: 4px solid #aae858;
+  border-radius: 30px;
+}
+
+.chp-card-container:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+}
+
+.cleaner-img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  /* Corners are handled by the container */
+}
+
+/* --- Card Content --- */
+.chp-card-content {
+  padding: 15px 15px 10px 15px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.chp-card-content h2 {
+  font-size: 1.2rem;
+  color: #1c4274;
+  margin: 0 0 5px 0;
+  font-weight: 700;
+  font-family: "Cal Sans", sans-serif;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.stat-rate{
+  font-size: 10px;
+    color: #666;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.chp-card-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+.chp-card-btn {
+  background-color: #1c4274;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px;
+  margin-top: 15px; /* Use margin-top here for spacing */
+  cursor: pointer;
+  font-size: 1rem;
+  width: fit-content;
+  transition: background-color 0.2s ease;
+}
+
+.chp-card-btn:hover {
+  background-color: #2d5a9e;
+}
+
+/* --- HOVER OVERLAY STYLES (Refined Transparency and Text) --- */
+.chp-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    28,
+    66,
+    116,
+    0.98
+  ); /* Less transparent for cleaner text */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  box-sizing: border-box;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 10;
+  border-radius: 12px; /* Match container radius */
+}
+
+.chp-card-container:hover .chp-card-overlay {
+  opacity: 1;
+}
+
+.chp-card-overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: 800;
+  color: #aae858; /* Green Accent Title */
+}
+
+.chp-card-overlay p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #f0f0f0;
+  margin-bottom: 25px;
+}
+
+.chp-card-overlay button {
+  background-color: #aae858;
+  color: #1c4274;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.chp-card-overlay button:hover {
+  transform: scale(1.05);
+  background-color: #9bd64e;
+}

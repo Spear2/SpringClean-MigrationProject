@@ -1,0 +1,196 @@
+/* --- PAGE LAYOUT --- */
+.cleanerCalendar-container {
+  padding: 0px;
+  margin: 0px;
+  background-color: #bfdff5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.calendar-header {
+  margin: 10px 30px 0 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border-top: 4px solid #aae858; /* Green Accent */
+  color: #1c4274; /* Dark Blue */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 20px 30px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Cal Sans", sans-serif;
+  flex-shrink: 0;
+}
+
+.calendar-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.calendar-content {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the calendar */
+  gap: 20px;
+  font-family: "Cal Sans", sans-serif;
+}
+
+/* =========================================
+   CUSTOMIZING REACT-CALENDAR
+   ========================================= */
+
+/* 1. The Main Card Container */
+.react-calendar {
+  width: 100% !important;
+  max-width: 900px; /* Slightly wider to accommodate big fonts */
+  background: white;
+  border: none !important;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(28, 66, 116, 0.1);
+  font-family: "Cal Sans", sans-serif !important;
+  line-height: 2em;
+  padding: 30px; /* More padding inside the card */
+}
+
+/* 2. Navigation (Month Name & Arrows) */
+.react-calendar__navigation {
+  display: flex;
+  height: 60px; /* Taller navigation bar */
+  margin-bottom: 25px;
+}
+
+.react-calendar__navigation button {
+  min-width: 50px;
+  background: none;
+  font-size: 2.2rem; /* LARGE Month Title */
+  color: #1c4274;
+  font-family: "Cal Sans", sans-serif;
+  font-weight: bold;
+}
+
+/* Hover effect on arrows */
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:enabled:focus {
+  background-color: #f0f7ff;
+  border-radius: 10px;
+}
+
+/* 3. The Weekdays (MON, TUE, WED...) */
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.3rem; /* Larger weekday labels */
+  color: #666;
+  text-decoration: none;
+  margin-bottom: 15px;
+}
+
+.react-calendar__month-view__weekdays__weekday abbr {
+  text-decoration: none;
+  cursor: default;
+}
+
+/* 4. The Days (The Numbers) */
+.react-calendar__tile {
+  max-width: 100%;
+  padding: 20px 6px; /* Bigger padding for bigger buttons */
+  background: none;
+  text-align: center;
+  line-height: 16px;
+  font-size: 1.8rem; /* LARGE Day Numbers */
+  border-radius: 15px;
+  transition: all 0.2s ease;
+  font-family: sans-serif;
+  color: #1c4274;
+}
+
+/* Hovering over a day */
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #e6eff7;
+  color: #1c4274;
+}
+
+/* 5. "Today" Styling */
+.react-calendar__tile--now {
+  background: #aae858 !important; /* Green */
+  color: #1c4274 !important;
+  font-weight: bold;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #9bd64e !important;
+}
+
+/* 6. "Selected" Day Styling */
+.react-calendar__tile--active {
+  background: #1c4274 !important; /* Blue */
+  color: white !important;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #143258 !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .calendar-header {
+    margin: 10px 15px 0 15px;
+    padding: 15px;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .calendar-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .react-calendar__tile {
+    font-size: 1.2rem; /* Scale down slightly on mobile so it fits */
+    padding: 10px 2px;
+  }
+}
+
+/* The Dot Indicator */
+.event-dot {
+  background-color: #aae858; /* Your Green Accent */
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  margin: 5px auto 0 auto; /* Centers it under the number */
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Optional: Styling the list below the calendar */
+.selected-date-jobs {
+  width: 100%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  font-family: "Cal Sans", sans-serif;
+  color: #1c4274;
+}
+
+.selected-date-jobs ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.selected-date-jobs li {
+  background-color: #f0f7ff;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 4px solid #1c4274;
+}

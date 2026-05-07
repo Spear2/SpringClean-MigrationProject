@@ -1,0 +1,32 @@
+.RoleBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  background-color: #aae858;
+  color: #1c4274;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.RoleBtn:hover {
+  background-color: #1c4274;
+  color: #aae858;
+  transform: scale(1.05);
+}
+
+.RoleBtn.active {
+  background-color: #1c4274;
+  color: #aae858;
+}
+
+.role-icon {
+  width: 24px;
+  height: 24px;
+}
