@@ -1,0 +1,168 @@
+/* Prevent nav items from jumping */
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: #1c4274;
+  color: white;
+  z-index: 1;
+}
+
+.title-link {
+  font-size: 2rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: white;
+}
+
+/* ⭐ Fixes the top alignment issue */
+.nav-links {
+  display: flex;
+  align-items: center; /* <-- Important */
+  gap: 25px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1.1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #aae858;
+}
+
+/* ----------------- Account Button ----------------- */
+.account-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff22;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.account-btn:hover {
+  background: #ffffff33;
+}
+
+.account-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #eef5ff;
+  color: #1c4274;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.arrow {
+  transition: transform 0.2s ease;
+}
+.arrow.rotated {
+  transform: rotate(180deg);
+}
+
+/* ------------------ FIXED Dropdown (clean & vertical) ------------------ */
+.dropdown-menu {
+  position: fixed;
+  top: 70px;
+  right: 20px;
+
+  width: 170px;
+  background: #ffffff;
+  border-radius: 10px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+
+  opacity: 0;
+  transform: translateY(-8px);
+  pointer-events: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+
+  z-index: 2000;
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Menu items are now VERTICAL */
+.menu-item {
+  display: block; /* <<< FIXES the row issue */
+  width: 100%;
+  text-align: left;
+
+  padding: 12px 16px;
+  font-family: "Nunito", sans-serif;
+  font-size: 0.95rem;
+  color: #1c4274;
+  text-decoration: none; /* <<< removes blue underline */
+
+  cursor: pointer;
+  transition: background 0.2s ease, padding-left 0.2s ease;
+}
+
+.menu-item:hover {
+  background: #eef4ff;
+  padding-left: 22px; /* subtle slide-in */
+}
+
+.sign-out {
+  color: #d3312d !important;
+  border-top: 1px solid #eaeaea;
+}
+
+.sign-out:hover {
+  background: #ffe9e9;
+  color: #b8221c !important;
+}
+
+/* ----------------- Mobile ----------------- */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    width: 100%;
+    background: #1c4274;
+    flex-direction: column;
+    padding: 20px 0;
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .hamburger span {
+    width: 25px;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+  }
+}

@@ -1,0 +1,205 @@
+/* Define SpringClean Palette for consistency */
+:root {
+  --primary-blue: #1c4274;
+  --accent-green: #aae858;
+  --success-green: #2e7d32;
+  --background-light: #f0f7ff;
+  --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.08);
+  --warning-gold: #ffc107;
+}
+
+.review-wrapper {
+  /* Use the light background color */
+  background-color: var(--background-light);
+  max-width: 850px;
+  margin: 40px auto; /* Reduced top margin for better flow */
+  padding: 20px;
+  font-family: "Nunito", sans-serif;
+  min-height: 100vh;
+}
+
+/* --- Header --- */
+.review-header {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Cal Sans", sans-serif;
+  letter-spacing: 1px;
+  margin-top: 30px;
+}
+
+.review-header h1 {
+  color: var(--primary-blue);
+  font-weight: 800;
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+}
+
+.review-header span {
+  color: #777;
+  font-size: 1.1rem;
+}
+
+/* --- Form Container --- */
+.review-form {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: var(--shadow-light);
+  border-top: 5px solid var(--accent-green); /* Green accent line */
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.review-select,
+.review-text {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  color: #333;
+  transition: border-color 0.2s;
+}
+
+.review-select:focus,
+.review-text:focus {
+  border-color: var(--primary-blue);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(28, 66, 116, 0.1);
+}
+
+/* --- Stars --- */
+.star-rating {
+  font-size: 2.5rem;
+  margin: 5px 0 15px 0;
+  text-align: center;
+}
+
+.star {
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.2s;
+  margin: 0 3px;
+}
+
+.star.filled {
+  color: var(--warning-gold);
+}
+
+/* --- File Upload Label --- */
+.attachment-label {
+  font-weight: 600;
+  color: var(--primary-blue);
+  display: block;
+  cursor: pointer;
+}
+
+.attachment-label input[type="file"] {
+  display: block; /* Makes the file input visible below the label text */
+  margin-top: 5px;
+}
+
+/* --- Submit Button --- */
+.review-submit-btn {
+  background-color: var(--success-green);
+  color: white;
+  padding: 14px 25px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700;
+  width: 100%;
+  transition: background-color 0.2s;
+}
+
+.review-submit-btn:hover {
+  background-color: #1b5e20;
+}
+
+/* --- Success Message --- */
+.review-success {
+  text-align: center;
+  background: #e9fff4; /* Very light success green */
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  color: var(--success-green);
+  border: 1px solid var(--success-green);
+  font-weight: 600;
+}
+
+/* --- Review History --- */
+.review-history h2 {
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.review-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  border-left: 5px solid var(--accent-green); /* Accent left edge for history cards */
+}
+
+.review-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.review-top strong {
+  color: var(--primary-blue);
+  font-weight: 700;
+}
+
+.review-date {
+  color: #888;
+}
+
+.review-stars {
+  color: var(--warning-gold);
+  font-size: 1.5rem;
+  margin: 0 0 10px 0;
+}
+
+.review-text-display {
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  border-top: 1px dashed #eee;
+  padding-top: 10px;
+}
+
+.review-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block; /* Fixes layout issues with images */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .review-wrapper {
+    padding: 10px;
+  }
+  .review-header h1 {
+    font-size: 2rem;
+  }
+  .review-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .review-date {
+    margin-top: 5px;
+  }
+}

@@ -1,0 +1,67 @@
+/* Existing styles */
+.homepage {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+
+.homepage section {
+  width: 100%;
+  position: relative;
+  display: block;
+  clear: both;
+}
+
+#home,
+#services,
+#aboutus {
+  width: 100%;
+  opacity: 0; /* start hidden */
+  transform: translateY(50px); /* start slightly below */
+  animation: fadeInUp 1s forwards; /* fade-in animation */
+}
+
+/* Delay each section for a stagger effect */
+#services {
+  animation-delay: 0.3s;
+}
+
+#aboutus {
+  animation-delay: 0.6s;
+}
+
+.homepage > section {
+  position: relative;
+  z-index: auto;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.homepage::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* ---------- ANIMATION ---------- */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

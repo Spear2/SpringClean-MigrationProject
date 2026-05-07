@@ -1,0 +1,224 @@
+/* GLOBAL LAYOUT */
+.CleanerProfile-container {
+  padding: 0px;
+  margin: 0px;
+  background-color: #bfdff5;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Reusing Header Style */
+.dashboard-header {
+  margin: 10px 30px 0 30px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  border-top: 4px solid #aae858;
+  color: #1c4274;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Cal Sans", sans-serif;
+  flex-shrink: 0;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* BODY WRAPPER - Centers the card */
+.profile-body {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: flex-start; /* Start from top */
+}
+
+/* --- THE PROFILE CARD --- */
+.profile-card {
+  background-color: white;
+  width: 100%;
+  max-width: 500px; /* Limits width for a nice card look */
+  border-radius: 20px;
+  border-top: 5px solid #aae858;
+  box-shadow: 0 10px 30px rgba(28, 66, 116, 0.1);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-family: "Cal Sans", sans-serif;
+}
+
+/* 1. HEADER SECTION */
+.profile-header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  background-color: #1c4274;
+  color: #aae858;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.profile-name {
+  margin: 0;
+  color: #1c4274;
+  font-size: 24px;
+}
+
+.profile-role {
+  margin: 5px 0 15px 0;
+  color: #888;
+  font-family: sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Stats Row */
+.profile-stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: #f0f7ff;
+  padding: 10px 30px;
+  border-radius: 12px;
+}
+
+.stat-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-val {
+  font-size: 20px;
+  color: #1c4274;
+}
+
+.stat-label {
+  font-size: 10px;
+  color: #666;
+  text-transform: uppercase;
+  font-family: sans-serif;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 30px;
+  background-color: #d1d9e6;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #eee;
+  margin: 0;
+}
+
+/* 2. DETAILS SECTION */
+.section-header {
+  margin: 0 0 15px 0;
+  color: #1c4274;
+  font-size: 16px;
+  border-bottom: 2px solid #aae858;
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.detail-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.detail-row label {
+  color: #888;
+  font-size: 14px;
+  font-family: sans-serif;
+}
+
+.detail-row p {
+  margin: 0;
+  color: #1c4274;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* 3. ACTIONS SECTION */
+.profile-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-edit {
+  padding: 12px;
+  background-color: #1c4274;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-family: "Cal Sans", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-edit:hover {
+  background-color: #153259;
+}
+
+.btn-logout {
+  padding: 12px;
+  background-color: transparent;
+  color: #d32f2f;
+  border: 1px solid #ffebee;
+  border-radius: 10px;
+  font-family: "Cal Sans", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-logout:hover {
+  background-color: #ffebee;
+  border-color: #d32f2f;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .dashboard-header {
+    margin: 10px 15px 0 15px;
+    padding: 15px;
+  }
+
+  .profile-card {
+    padding: 25px;
+  }
+
+  .detail-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}

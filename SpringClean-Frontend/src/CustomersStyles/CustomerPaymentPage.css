@@ -1,0 +1,306 @@
+
+/* Container for payment methods and inputs */
+.cpp-payment-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #fff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Payment methods container */
+.cpp-payment-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Single payment card */
+.cpp-payment-card {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 1rem 0.75rem;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  user-select: none;
+  background-color: #f9f9f9;
+}
+
+.cpp-payment-card:hover {
+  border-color: #007bff;
+  box-shadow: 0 3px 10px rgba(0,123,255,0.3);
+}
+
+.cpp-payment-card.selected {
+  border-color: #007bff;
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+  background-color: #e9f0ff;
+}
+
+.payment-card img {
+  max-width: 80px;
+  margin-bottom: 0.5rem;
+  pointer-events: none;
+}
+
+/* Inputs and labels */
+.cpp-payment-container input[type="text"],
+.cpp-payment-container input[type="email"],
+.cpp-payment-container input[type="password"] {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+.cpp-payment-container input[type="text"]:focus,
+.cpp-payment-container input[type="email"]:focus,
+.cpp-payment-container input[type="password"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.cpp-payment-container label {
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+  display: block;
+  color: #1c4274;
+  user-select: none;
+}
+
+/* Checkbox label */
+.cpp-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+.cpp-checkbox-label input[type="checkbox"] {
+  margin: 5px;
+  width: 18px;
+  height: 18px;
+  position: relative;
+  top: 3px;
+}
+
+/* Pay button */
+.cpp-payment-container button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cpp-payment-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Modal overlay */
+.cpp-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3000;
+}
+
+/* Modal box */
+.cpp-modal-overlay .cpp-modal-content {
+  width: 90%;           /* responsive width */
+  max-width: 400px;     /* caps the width */
+  min-width: 280px;     /* prevents too small */
+  padding: 2rem;
+  border-radius: 14px;
+  background: #fff;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: auto;         /* ⚡ let content decide the height */
+  max-height: 90vh;     /* optional: never taller than viewport */
+  overflow-y: auto;     /* scroll if content exceeds max-height */
+}
+
+/* Modal header */
+.cpp-modal-content h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: #1c4274;
+}
+
+/* Modal list */
+.cpp-modal-content ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0.5rem 0 1.5rem;
+  color: #000408;
+}
+
+.cpp-modal-content ul li {
+  padding: 0.25rem 0;
+  border-bottom: 1px solid #eee;
+  font-size: 0.95rem;
+}
+
+/* Modal buttons container */
+.cpp-modal-content > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Modal buttons */
+.cpp-modal-content button {
+  flex: 1;
+  margin: 0 0.25rem;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.cpp-modal-content button:first-child {
+  background-color: #28a745; /* Confirm green */
+}
+
+.cpp-modal-content button:first-child:hover {
+  background-color: #218838;
+}
+
+.cpp-modal-content button:last-child {
+  background-color: #dc3545; /* Cancel red */
+}
+
+.cpp-modal-content button:last-child:hover {
+  background-color: #c82333;
+}
+
+/* Top content styles from your page */
+.top-content {
+  text-align: center;
+  margin: 2rem 0 3rem;
+}
+
+.top-content h1 {
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.top-content span {
+  font-size: 1.1rem;
+}
+/* Header */
+.settings-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: #1c4274;
+}
+
+.settings-header h1 {
+  font-size: 3.75rem; /* 60px */
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+}
+
+.settings-header span {
+  font-size: 1.5rem; /* ~25px */
+  font-family: "Nunito", sans-serif;
+}
+
+/* Payment container */
+.cpp-payment-container {
+  max-width: 900px;
+  margin: 0 auto 3rem auto;
+  padding: 1.5rem 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Nunito", sans-serif;
+  color: #1c4274;
+}
+
+/* Payment options list */
+.payment-options {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.payment-card {
+  flex: 1;
+  background: #f9f9f9;
+  border: 2px solid #1c4274;
+  border-radius: 12px;
+  padding: 1rem 0;
+  cursor: pointer;
+  text-align: center;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+  user-select: none;
+}
+
+.payment-card:hover,
+.payment-card.selected {
+  border-color: #007bff;
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+  background-color: #e9f0ff;
+}
+
+.payment-card img {
+  max-width: 70px;
+  margin-bottom: 0.5rem;
+  pointer-events: none;
+}
+
+/* Form inputs */
+.cpp-payment-container input[type="text"],
+.cpp-payment-container input[type="email"],
+.cpp-payment-container input[type="password"],
+.cpp-payment-container input[type="tel"] {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  border: 1.5px solid #1c4274;
+  border-radius: 10px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.cpp-payment-container .cpp-error-message {
+  color: #dc3545; /* bootstrap-style red */
+  font-size: 0.9rem;
+  margin-top: 0.25rem;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .modal-content {
+    width: 90%;      /* take most of the screen */
+    max-width: 90%;  /* cap at 90% */
+  }
+}

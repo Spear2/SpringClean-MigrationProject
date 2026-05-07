@@ -1,0 +1,159 @@
+/* --- PAGE CONTAINER --- */
+.review-container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* --- HEADER --- */
+.dashboard-header {
+  background-color: #ffffff;
+  border-radius: 18px;
+  border-top: 4px solid #aae858;
+  color: #1c4274;
+  padding: 25px 35px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: center;        /* centered header */
+  text-align: center;
+}
+
+.dashboard-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* --- FILTERS --- */
+.filters-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  justify-content: center;        /* CENTER filters */
+}
+
+.filter-item {
+  display: flex;
+  flex-direction: column;
+  min-width: 180px;
+}
+
+.filter-item label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #333;
+  font-weight: 500;
+}
+
+.filter-item select {
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+.filter-item select:hover {
+  border-color: #1c4274;
+}
+
+/* --- REVIEW LIST --- */
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* --- REVIEW CARD --- */
+.review-card {
+  background: white;
+  padding: 22px;
+  border-radius: 14px;
+  border: 1px solid #e5e5e5;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  transition: 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* --- REVIEW HEADER --- */
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.review-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* --- TAGS --- */
+.tag {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.tag.positive {
+  background: #e6f7e9;
+  color: #1e9b45;
+}
+
+.tag.complaint {
+  background: #fde5e5;
+  color: #d32f2f;
+}
+
+.tag.neutral {
+  background: #f0f0f0;
+  color: #555;
+}
+
+/* --- STAR ROW --- */
+.star-row {
+  display: flex;
+  gap: 4px;
+  margin: 12px 0 6px;
+}
+
+/* --- REVIEW MESSAGE --- */
+.review-message {
+  color: #444;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  font-size: 15px;
+}
+
+/* --- REVIEW DATE --- */
+.review-date {
+  font-size: 12px;
+  color: gray;
+}
+
+/* --- NO REVIEWS MESSAGE --- */
+.no-reviews {
+  padding: 40px;
+  text-align: center;
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  color: #666;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}

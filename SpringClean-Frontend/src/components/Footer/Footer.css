@@ -1,0 +1,31 @@
+.footer {
+  background-color: #1c4274;
+  color: #e9f1ff;
+  text-align: center;
+  padding: 25px 15px;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.footer h3 {
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: #e9f1ff;
+  font-size: 1.4rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #a6e22e;
+  transform: scale(1.2);
+}
